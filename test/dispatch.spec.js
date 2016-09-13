@@ -1,4 +1,4 @@
-import { ok } from 'assert'
+import assert from 'assert'
 import Loader from 'mongo-primer'
 import { Processor, Dispatcher, Queue, Storage, Handler, Config } from '../src/index.js'
 
@@ -40,7 +40,7 @@ afterEach(() => {
 describe('Dispatch', () => {
   it('runs a task', () => {
     return addTaskToQueueByEvent('whatever').then(doRun).then(() => {
-      ok(result)
+      assert.ok(result)
     })
   })
 })

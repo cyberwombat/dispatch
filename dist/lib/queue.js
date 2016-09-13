@@ -72,12 +72,10 @@ function addItem(task, payload) {
 
   var when = (0, _moment2.default)();
   if (task.delay) {
-    var _task$delay$split = task.delay.split(/\s+/);
+    var _task$delay = _slicedToArray(task.delay, 2);
 
-    var _task$delay$split2 = _slicedToArray(_task$delay$split, 2);
-
-    var count = _task$delay$split2[0];
-    var unit = _task$delay$split2[1];
+    var count = _task$delay[0];
+    var unit = _task$delay[1];
 
     when.add(count, unit);
   }
