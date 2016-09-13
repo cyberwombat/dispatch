@@ -1,0 +1,68 @@
+{
+  "name": "dispatch-js",
+  "version": "0.0.1",
+  "description": "Mongo backed event queue with scheduling and event sequencing",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register test/dispatch.spec.js",
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "event",
+    "queue",
+    "event",
+    "emitter",
+    "message",
+    "bus",
+    "cron",
+    "scheduling"
+  ],
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-3"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "expect",
+      "describe",
+      "it",
+      "sinon",
+      "nock"
+    ]
+  },
+  "author": "cyberwombat",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-3": "^6.11.0",
+    "babel-register": "^6.14.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "mockery": "^1.7.0",
+    "mongo-primer": "^0.2.0",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "debug": "^2.2.0",
+    "joi": "^9.0.4",
+    "lodash": "^4.15.0",
+    "moment": "^2.14.1",
+    "winston": "^2.2.0"
+  },
+  "optionalDependencies": {
+    "mongodb": "^2.2.9"
+  }
+}
